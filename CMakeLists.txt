@@ -15,5 +15,5 @@ if (CURL_FOUND)
 endif()
 add_executable(tgbot src/tgbot.cpp)
 
-target_link_libraries(tgbot /usr/local/lib/libTgBot.a ${CMAKE_THREAD_LIBS_INIT} ${OPENSSL_LIBRARIES} ${Boost_LIBRARIES} ${CURL_LIBRARIES})
+target_link_libraries(tgbot /usr/lib/libTgBot.so ${CMAKE_THREAD_LIBS_INIT} ${OPENSSL_LIBRARIES} ${Boost_LIBRARIES} ${CURL_LIBRARIES})
 
