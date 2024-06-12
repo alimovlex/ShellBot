@@ -13,7 +13,7 @@ if (CURL_FOUND)
     include_directories(${CURL_INCLUDE_DIRS})
     add_definitions(-DHAVE_CURL)
 endif()
-add_executable(tgbot src/tgbot.cpp)
+add_executable(tgbot main.cpp)
 
 target_link_libraries(tgbot /usr/lib/libTgBot.so ${CMAKE_THREAD_LIBS_INIT} ${OPENSSL_LIBRARIES} ${Boost_LIBRARIES} ${CURL_LIBRARIES})
 
