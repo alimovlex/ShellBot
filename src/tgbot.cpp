@@ -80,9 +80,9 @@ void runBot(Bot &build) {
         if (running) {
             string out = runcommands(message->text.c_str());
             if (out.empty())
-                build.getApi().sendMessage(message->chat->id, "command executed with errors");
+                build.getApi().sendMessage(message->chat->id,"Command executed successfully but there's no return output.");
             else {
-                build.getApi().sendMessage(message->chat->id, "Command executed successfully");
+                //build.getApi().sendMessage(message->chat->id, "Command executed successfully");
                 escape_html(out);
                 build.getApi().sendMessage(message->chat->id, "<b>Output:-</b> \n \n<code>" + out + "</code>", true,
                                            0, keyboard, "HTML");
